@@ -1,5 +1,14 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaGooglePlusG,
+  FaLinkedinIn,
+  FaTwitter,
+  FaYoutube,
+} from "react-icons/fa";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +20,104 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <div className="container mx-auto px-8 py-4">
+          <nav className="w-full flex justify-between items-center">
+            <div className="flex gap-8">
+              <Image
+                src="/images/logo/LogoBlack.png"
+                alt="Logo"
+                width={52}
+                height={52}
+              />
+              <ul className="flex items-center gap-12">
+                <li>
+                  <Link href="#">About Us</Link>
+                </li>
+                <li>
+                  <Link href="#">How it work</Link>
+                </li>
+                <li>
+                  <Link href="#">Pricing</Link>
+                </li>
+                <li>
+                  <Link href="#">FAQs</Link>
+                </li>
+              </ul>
+            </div>
+            <div className="flex gap-4">
+              <button className="bg-white px-4 py-2">Login</button>
+              <button className="bg-black text-white px-4 py-2">Sign Up</button>
+            </div>
+          </nav>
+          <content>{children}</content>
+        </div>
+        <footer className="bg-black text-white">
+          <div className="container mx-auto px-8 py-8">
+            <div className="flex justify-between mb-28">
+              <div className="w-2/5">
+                <Image
+                  src="/images/logo/LogoWhite.png"
+                  alt="Logo"
+                  width={52}
+                  height={52}
+                />
+                <h1 className="font-medium text-4xl py-8">
+                  Want to receive our awesome stories?
+                </h1>
+                <div className="flex">
+                  <input
+                    placeholder="Enter your email"
+                    className="w-full px-4 py-4 text-black"
+                  />
+                  <button className="text-white px-4 py-4 border-2 border-white">
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+              <div className="flex gap-24">
+                <div className="flex flex-col gap-y-4">
+                  <h3 className="font-bold">Email</h3>
+                  <span>info@the18.design</span>
+                </div>
+                <div className="flex flex-col gap-y-4">
+                  <Link href="#">About Us</Link>
+                  <Link href="#">How it works</Link>
+                  <Link href="#">Pricing</Link>
+                  <Link href="#">FAQs</Link>
+                </div>
+                <div className="flex flex-col gap-y-4">
+                  <Link href="#">Lead generation</Link>
+                  <Link href="#">Customer engagement</Link>
+                  <Link href="#">Customer support</Link>
+                  <Link href="#">Help Center Articles</Link>
+                  <Link href="#">Outbound Messages</Link>
+                </div>
+              </div>
+            </div>
+            <div className="flex justify-between">
+              <span>© The 18 Design, All rights reserved.</span>
+              <div className="flex align-middle gap-8">
+                <Link href="#">
+                  <FaFacebookF fontSize={22} />
+                </Link>
+                <Link href="#">
+                  <FaTwitter fontSize={22} />
+                </Link>
+                <Link href="#">
+                  <FaGooglePlusG fontSize={24} />
+                </Link>
+                <Link href="#">
+                  <FaLinkedinIn fontSize={22} />
+                </Link>
+                <Link href="#">
+                  <FaYoutube fontSize={22} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </body>
     </html>
   );
 }
