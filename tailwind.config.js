@@ -15,6 +15,9 @@ module.exports = {
         black: '#151515',
         grayen: '#F0F0F0',
       },
+      listStyleType: {
+        square: 'square'
+      }
     }
   },
   plugins: [],
