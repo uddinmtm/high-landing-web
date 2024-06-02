@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <>
-      <section className="flex justify-between gap-8 mt-24">
+    <div className="flex flex-col gap-20 my-16 pb-16">
+      <section className="flex justify-between gap-8">
         <div className="w-4/6">
           <h1 className="text-6xl">
             Always Track & Analyze Your Business Statistics To Succeed.
@@ -58,7 +58,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-between gap-8 mt-24">
+      <section className="flex justify-between gap-8">
         <div>
           <Image
             src="/images/illustrations/Illustrations_2.png"
@@ -90,7 +90,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex justify-between gap-12 mt-24">
+      <section className="flex justify-between gap-12">
         <div className="flex flex-col gap-8 w-3/6">
           <span className="w-fit py-2 px-4 border-2 border-black uppercase font-bold">
             How It Works
@@ -176,7 +176,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-12 mt-24">
+      <section className="flex flex-col gap-12">
         <div className="flex justify-between gap-8">
           <div className="w-2/3">
             <Image
@@ -272,6 +272,101 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
+
+      <section className="flex gap-12">
+        <div className="flex flex-col gap-8 w-4/6">
+          <span className="w-fit py-2 px-4 border-2 border-black uppercase font-bold">
+            FAQS
+          </span>
+          <h1 className="text-5xl">Common Questions.</h1>
+          <p className="text-base">
+            The online form also provides links to a set of frequently asked
+            questions, other information materials related to the financial
+            disclosure programme.
+          </p>
+
+          <div>
+            <div className="border-b-2 border-black py-2">
+              <div className="flex flex-row justify-between hover:cursor-pointer py-2">
+                <span className="font-bold">
+                  How much does a Teams subscription cost?
+                </span>
+                <span className="font-bold text-right">+</span>
+              </div>
+              <p className="py-2">
+                Contributors are members of your team who need access to use the
+                Mac app to create and edit Sketch documents. These prices don’t
+                include sales tax, which may still apply. Head over to our pricing
+                page to get full details.
+              </p>
+            </div>
+            <div className="border-b-2 border-black py-2">
+              <div className="flex flex-row justify-between hover:cursor-pointer py-2">
+                <span className="font-bold">
+                Do I still need to purchase licenses for the Mac app?
+                </span>
+                <span className="font-bold text-right">-</span>
+              </div>
+              <p className="hidden py-2">
+                Contributors are members of your team who need access to use the
+                Mac app to create and edit Sketch documents. These prices don’t
+                include sales tax, which may still apply. Head over to our pricing
+                page to get full details.
+              </p>
+            </div>
+            <div className="border-b-2 border-black py-2">
+              <div className="flex flex-row justify-between hover:cursor-pointer py-2">
+                <span className="font-bold">
+                What are the differences between Contributors and Viewers?
+                </span>
+                <span className="font-bold text-right">-</span>
+              </div>
+              <p className="hidden py-2">
+                Contributors are members of your team who need access to use the
+                Mac app to create and edit Sketch documents. These prices don’t
+                include sales tax, which may still apply. Head over to our pricing
+                page to get full details.
+              </p>
+            </div>
+            <div className="border-b-2 border-black py-2">
+              <div className="flex flex-row justify-between hover:cursor-pointer py-2">
+                <span className="font-bold">
+                How long does the free Teams subscription trial last?
+                </span>
+                <span className="font-bold text-right">-</span>
+              </div>
+              <p className="hidden py-2">
+                Contributors are members of your team who need access to use the
+                Mac app to create and edit Sketch documents. These prices don’t
+                include sales tax, which may still apply. Head over to our pricing
+                page to get full details.
+              </p>
+            </div>
+            <div className="border-b-2 border-black py-2">
+              <div className="flex flex-row justify-between hover:cursor-pointer py-2">
+                <span className="font-bold">
+                Will program for Teams replace volume licensing?
+                </span>
+                <span className="font-bold text-right">-</span>
+              </div>
+              <p className="hidden py-2">
+                Contributors are members of your team who need access to use the
+                Mac app to create and edit Sketch documents. These prices don’t
+                include sales tax, which may still apply. Head over to our pricing
+                page to get full details.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <Image
+            src="/images/illustrations/Illustration_5.png"
+            alt="Illustration"
+            width={580}
+            height={500}
+          />
+        </div>
+      </section>
+    </div>
   );
 }
